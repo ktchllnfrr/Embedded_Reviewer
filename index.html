@@ -12,10 +12,6 @@
         <div class="hero-content">
             <h1>🚀 Embedded Systems Explorer 🚀</h1>
             <p class="tagline">Unraveling the fascinating world of embedded systems, one concept at a time. Let's learn!</p>
-            <div class="scoreboard">
-                <p><strong>Total Score: <span id="total-score">0</span> points</strong></p>
-                <p>🏆 Badges Earned: <span id="badges-count">0</span></p>
-            </div>
             <a href="#main-content" class="btn-primary">Start Your Journey!</a>
         </div>
     </header>
@@ -39,18 +35,17 @@
 
         <section id="characteristics" class="topic-section">
             <h2 class="section-title">1. The DNA of Embedded Systems: Characteristics</h2>
-            <div id="badge-characteristics" class="badge" style="display: none;">🏅 Section Complete! +50 Bonus Points</div>
-            <p class="section-intro">What makes an embedded system tick? Let's dive into their core traits! Embedded systems have unique characteristics that distinguish them from general-purpose computers.</p>
+            <p class="section-intro">What makes an embedded system tick? Let's dive into their core traits!</p>
 
             <div class="accordion">
                 <div class="accordion-item">
                     <button class="accordion-header">Application and Domain Specific <span class="arrow">▼</span></button>
                     <div class="accordion-content">
-                        <p>Embedded systems are designed for specific functions only and cannot be used for other purposes. They are tailored to a particular application or domain.</p>
+                        <p>Unlike your versatile laptop, embedded systems are laser-focused. They're built for one job, and they do it exceptionally well!</p>
                         <ul>
-                            <li>Each system performs intended functions exclusively.</li>
-                            <li>Developed to meet domain-specific needs (e.g., automotive vs. consumer electronics).</li>
-                            <li><em>Example:</em> The embedded control unit of a microwave oven cannot be replaced with an AC's control unit—each is custom-built for its task.</li>
+                            <li>Each system has specific, intended functions only.</li>
+                            <li>Cannot be repurposed for other uses.</li>
+                            <li><em>Think:</em> Your microwave's brain can't run your AC! Each is custom-built.</li>
                         </ul>
                     </div>
                 </div>
@@ -58,12 +53,12 @@
                 <div class="accordion-item">
                     <button class="accordion-header">Reactive and Real-Time <span class="arrow">▼</span></button>
                     <div class="accordion-content">
-                        <p>Embedded systems constantly interact with the real world and must respond predictably within time constraints.</p>
+                        <p>Embedded systems are constantly chatting with the real world, reacting instantly to changes.</p>
                         <ul>
-                            <li>Reactive: Produce output changes in response to input changes via sensors and user devices.</li>
-                            <li>Real-Time: Deterministic timing behavior—responses must occur within deadlines.</li>
-                            <li><em>Examples:</em> Flight control systems (must react instantly to pilot inputs), Anti-lock Brake Systems (ABS) in cars (prevents skidding by modulating brakes in milliseconds).</li>
-                            <li>Deadlines can range from microseconds to hours, depending on the application.</li>
+                            <li>Interact via sensors and input devices.</li>
+                            <li>Produce output changes in response to input changes (reactive).</li>
+                            <li><strong>Real-Time:</strong> Must respond within a known, predictable timeframe (deterministic).</li>
+                            <li><em>Mission Critical Examples:</em> Flight control systems, Anti-lock Brake Systems (ABS) – no delays allowed!</li>
                         </ul>
                     </div>
                 </div>
@@ -71,12 +66,11 @@
                 <div class="accordion-item">
                     <button class="accordion-header">Operates in Harsh Environments <span class="arrow">▼</span></button>
                     <div class="accordion-content">
-                        <p>Embedded systems must withstand extreme conditions, influencing component selection and design.</p>
+                        <p>From scorching deserts to vibrating factories, embedded systems are built tough.</p>
                         <ul>
-                            <li>Consider factors like temperature (-40°C to 125°C), shock, vibration, humidity, and dust.</li>
-                            <li>Use high-grade components (e.g., industrial or automotive-rated chips).</li>
-                            <li><em>Example:</em> In hot industrial zones, select high-temperature-grade components; add shock absorption for high-impact applications like robotics.</li>
-                            <li>Design includes protective enclosures and redundancy for reliability.</li>
+                            <li>Design must account for extreme conditions (temperature, shock, humidity).</li>
+                            <li>Components must be high-grade for the environment.</li>
+                            <li>Proper shock absorption for high-impact areas.</li>
                         </ul>
                     </div>
                 </div>
@@ -84,12 +78,11 @@
                 <div class="accordion-item">
                     <button class="accordion-header">Distributed & Collaborative <span class="arrow">▼</span></button>
                     <div class="accordion-content">
-                        <p>Many embedded systems work as part of larger networks, with independent units cooperating.</p>
+                        <p>Sometimes, many small embedded systems team up to achieve a bigger goal.</p>
                         <ul>
-                            <li>Can be standalone or integrated into bigger systems.</li>
-                            <li>Multiple units communicate to achieve collective goals.</li>
-                            <li><em>Example:</em> An automatic vending machine: Separate embedded units for card reading, inventory management, and dispensing collaborate via internal buses.</li>
-                            <li>Requires protocols for synchronization and data sharing.</li>
+                            <li>May be part of a larger system.</li>
+                            <li>Multiple independent embedded units work together.</li>
+                            <li><em>Example:</em> An automatic vending machine has separate units for card reading, vending, etc., all cooperating.</li>
                         </ul>
                     </div>
                 </div>
@@ -97,12 +90,10 @@
                 <div class="accordion-item">
                     <button class="accordion-header">Small Size & Weight <span class="arrow">▼</span></button>
                     <div class="accordion-content">
-                        <p>Compactness is key for portability, aesthetics, and integration into devices.</p>
+                        <p>Who wants a bulky gadget? Aesthetics and portability matter!</p>
                         <ul>
-                            <li>Minimizes material use and enhances user handling.</li>
-                            <li>Drives use of surface-mount components and integrated circuits (ICs).</li>
-                            <li><em>Example:</em> Wearable fitness trackers must be lightweight (<50g) and small (wrist-sized) for comfort.</li>
-                            <li>Trade-offs: Smaller size may limit cooling or battery capacity.</li>
+                            <li>Important for product appeal and user convenience.</li>
+                            <li>Compact devices are easier to handle.</li>
                         </ul>
                     </div>
                 </div>
@@ -110,12 +101,10 @@
                 <div class="accordion-item">
                     <button class="accordion-header">Power Concerns <span class="arrow">▼</span></button>
                     <div class="accordion-content">
-                        <p>Energy efficiency is critical, especially for battery-powered or remote systems.</p>
+                        <p>Battery life and energy efficiency are often paramount.</p>
                         <ul>
-                            <li>Minimize consumption to extend battery life and reduce heat.</li>
-                            <li>Techniques: Low-power modes, clock gating, efficient algorithms.</li>
-                            <li><em>Example:</em> A wireless sensor node in IoT must operate on coin-cell batteries for years, targeting <1mW average power.</li>
-                            <li>Measured in mW/MIPS for processors.</li>
+                            <li>Power management is a critical design factor.</li>
+                            <li>Designed to minimize heat dissipation.</li>
                         </ul>
                     </div>
                 </div>
@@ -123,12 +112,10 @@
                 <div class="accordion-item">
                     <button class="accordion-header">Single-Functioned & Complex Functionality <span class="arrow">▼</span></button>
                     <div class="accordion-content">
-                        <p>They focus on one primary task but may involve intricate computations.</p>
+                        <p>A paradox? Not really! They do one thing, but that one thing can be incredibly intricate.</p>
                         <ul>
-                            <li>Single-Functioned: Dedicated to a core purpose (e.g., engine control).</li>
-                            <li>Complex: Runs advanced algorithms, AI, or multi-tasking within constraints.</li>
-                            <li><em>Example:</em> A smartphone's camera module: Single function (image capture) but complex (sensor fusion, image processing).</li>
-                            <li>Balances simplicity with sophistication.</li>
+                            <li>Dedicated to perform a single primary function.</li>
+                            <li>Yet, may run sophisticated or multiple algorithms to achieve that function.</li>
                         </ul>
                     </div>
                 </div>
@@ -136,91 +123,455 @@
                 <div class="accordion-item">
                     <button class="accordion-header">Tightly-Constrained & Safety-Critical <span class="arrow">▼</span></button>
                     <div class="accordion-content">
-                        <p>Operate under strict limits; failures can be life-threatening.</p>
+                        <p>Operating under strict limitations, often with lives on the line.</p>
                         <ul>
-                            <li>Tightly-Constrained: Low cost (<$10/unit), low power, small size, high speed.</li>
-                            <li>Safety-Critical: Must avoid harm; includes fail-safes and certification (e.g., ISO 26262 for automotive).</li>
-                            <li><em>Example:</em> Pacemaker: Constrained by size/power, but safety-critical—failure could be fatal.</li>
-                            <li>Requires rigorous testing and redundancy.</li>
+                            <li><strong>Tightly-Constrained:</strong> Low cost, low power, small size, fast performance are common limits.</li>
+                            <li><strong>Safety-Critical:</strong> Must prevent harm to humans and the environment. Safety analysis is crucial.</li>
                         </ul>
                     </div>
                 </div>
+            </div> <!-- End Accordion -->
 
+            <h3 class="sub-section-title">Quality Attributes: Beyond the Basics</h3>
+            <p>These are the non-functional requirements that define an embedded system's excellence.</p>
+
+            <div class="accordion">
                 <div class="accordion-item">
-                    <button class="accordion-header">Quality Attributes: Operational <span class="arrow">▼</span></button>
+                    <button class="accordion-header">Operational Quality Attributes <span class="arrow">▼</span></button>
                     <div class="accordion-content">
-                        <p>Focus on runtime performance and reliability.</p>
+                        <p>How well the system performs when it's up and running.</p>
                         <ul>
-                            <li><strong>Response:</strong> Quickness in tracking input changes (e.g., sensor response time).</li>
-                            <li><strong>Throughput:</strong> Efficiency rate (e.g., transactions/minute for payment systems).</li>
-                            <li><strong>Reliability:</strong> Proper functioning probability; MTBF (Mean Time Between Failures), MTTR (Mean Time To Repair).</li>
-                            <li><strong>Maintainability:</strong> Ease of scheduled/preventive or corrective maintenance.</li>
-                            <li><strong>Security:</strong> CIA triad—Confidentiality (data privacy), Integrity (no tampering), Availability (uptime).</li>
-                            <li><strong>Safety:</strong> Prevents damages to users/environment from failures (e.g., emergency shutdowns).</li>
+                            <li><strong>Response:</strong> How quickly it reacts to inputs (e.g., flight control).</li>
+                            <li><strong>Throughput:</strong> Its efficiency – how much work it gets done per unit time (e.g., transactions per minute for a card reader).</li>
+                            <li><strong>Reliability:</strong> How much you can trust it to work correctly (measured by MTBF, MTTR).</li>
+                            <li><strong>Maintainability:</strong> Ease of support and repair (preventive vs. corrective).</li>
+                            <li><strong>Security:</strong> Protecting data (Confidentiality, Integrity, Availability).</li>
+                            <li><strong>Safety:</strong> Preventing harm from system failures.</li>
                         </ul>
                     </div>
                 </div>
-
                 <div class="accordion-item">
-                    <button class="accordion-header">Quality Attributes: Non-Operational <span class="arrow">▼</span></button>
+                    <button class="accordion-header">Non-Operational Quality Attributes <span class="arrow">▼</span></button>
                     <div class="accordion-content">
-                        <p>Focus on development, deployment, and lifecycle.</p>
+                        <p>Qualities important during development, deployment, and evolution.</p>
                         <ul>
-                            <li><strong>Testability & Debug-ability:</strong> Ease of hardware/firmware testing (e.g., JTAG ports).</li>
-                            <li><strong>Evolvability:</strong> Adaptability to new tech without full redesign.</li>
-                            <li><strong>Portability:</strong> Independence from specific processors/OS/environments.</li>
-                            <li><strong>Time-to-Prototype & Market:</strong> Speed from concept to sales-ready product.</li>
-                            <li><strong>Per Unit Cost & Revenue:</strong> Balances manufacturing costs with profitability.</li>
+                            <li><strong>Testability & Debug-ability:</strong> How easy it is to test and fix issues (hardware and software levels).</li>
+                            <li><strong>Evolvability:</strong> How easily it can adapt to new tech.</li>
+                            <li><strong>Portability:</strong> Its independence from specific hardware/OS.</li>
+                            <li><strong>Time-to-Prototype & Market:</strong> Speed from idea to sale – crucial in competitive markets.</li>
+                            <li><strong>Per Unit Cost & Revenue:</strong> Balancing cost for market success and profit.</li>
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> <!-- End Accordion -->
 
-            <!-- Multiple Quizzes for Characteristics -->
-            <div class="quiz-card" data-section="characteristics">
-                <h4>🧠 Quick Check 1: Characteristics</h4>
+            <div class="quiz-card">
+                <h4>🧠 Quick Check: Characteristics</h4>
                 <p>Which characteristic describes an embedded system's ability to react to real-world changes in a predictable timeframe?</p>
                 <div class="options">
-                    <button onclick="checkAnswer('characteristics-1', 'B')">A) Application Specific</button>
-                    <button onclick="checkAnswer('characteristics-1', 'B')">B) Reactive and Real-Time</button>
-                    <button onclick="checkAnswer('characteristics-1', 'C')">C) Tightly-Constrained</button>
+                    <button onclick="checkAnswer(this, 'characteristics', 'A')">A) Application Specific</button>
+                    <button onclick="checkAnswer(this, 'characteristics', 'B')">B) Reactive and Real-Time</button>
+                    <button onclick="checkAnswer(this, 'characteristics', 'C')">C) Tightly-Constrained</button>
                 </div>
-                <p id="feedback-characteristics-1" class="feedback"></p>
-            </div>
-
-            <div class="quiz-card" data-section="characteristics">
-                <h4>🧠 Quick Check 2: Characteristics</h4>
-                <p>What does MTBF measure in terms of reliability?</p>
-                <div class="options">
-                    <button onclick="checkAnswer('characteristics-2', 'A')">A) Mean Time To Repair</button>
-                    <button onclick="checkAnswer('characteristics-2', 'B')">B) Mean Time Between Failures</button>
-                    <button onclick="checkAnswer('characteristics-2', 'C')">C) Mean Time To Prototype</button>
-                </div>
-                <p id="feedback-characteristics-2" class="feedback"></p>
-            </div>
-
-            <div class="quiz-card" data-section="characteristics">
-                <h4>🧠 Quick Check 3: Characteristics</h4>
-                <p>Why is power concern a key characteristic for embedded systems?</p>
-                <div class="options">
-                    <button onclick="checkAnswer('characteristics-3', 'A')">A) To increase heat dissipation</button>
-                    <button onclick="checkAnswer('characteristics-3', 'B')">B) To extend battery life and reduce costs</button>
-                    <button onclick="checkAnswer('characteristics-3', 'C')">C) To make systems larger</button>
-                </div>
-                <p id="feedback-characteristics-3" class="feedback"></p>
+                <p id="feedback-characteristics" class="feedback"></p>
             </div>
         </section>
 
         <section id="design-flow" class="topic-section">
             <h2 class="section-title">2. Blueprint for Success: Design Flow & Constraints</h2>
-            <div id="badge-design-flow" class="badge" style="display: none;">🏅 Section Complete! +50 Bonus Points</div>
-            <p class="section-intro">Every great embedded system starts with a solid plan. The design flow is a systematic process, while constraints (QoS) ensure feasibility.</p>
+            <p class="section-intro">Every great embedded system starts with a solid plan. Let's explore the design journey!</p>
 
             <div class="accordion">
                 <div class="accordion-item">
-                    <button class="accordion-header">Requirements Phase <span class="arrow">▼</span></button>
+                    <button class="accordion-header">The Design Journey: From Idea to Reality <span class="arrow">▼</span></button>
                     <div class="accordion-content">
-                        <p>Gather informal customer descriptions to define needs.</p>
+                        <p>Designing an embedded system is a structured process, ensuring all aspects are covered.</p>
                         <ul>
-                            <li>Functional: What the system does (e.g., inputs, outputs, functions).</li>
-                            <li>Non-Functional
+                            <li><strong>Requirements:</strong> What does the customer *need*? (Functional & Non-functional like performance, cost, size, power).</li>
+                            <li><strong>Specification:</strong> A precise, detailed contract of *what* the system will do.</li>
+                            <li><strong>Architecture:</strong> The high-level plan of *how* the system will be built (hardware & software block diagrams).</li>
+                            <li><strong>Components:</strong> Building the individual pieces (hardware like FPGAs, software modules).</li>
+                            <li><strong>System Integration:</strong> Putting it all together and making sure it works – and fixing bugs!</li>
+                        </ul>
+                        <p><em>Example:</em> Designing a GPS moving map involves defining its purpose, inputs (buttons), outputs (LCD), functions (5-receiver GPS), performance (0.25s update), cost, power, and physical size.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">The Tightrope Walk: Embedded Design Constraints (QoS) <span class="arrow">▼</span></button>
+                    <div class="accordion-content">
+                        <p>Embedded systems often operate under severe limitations, making design a challenging art.</p>
+                        <ul>
+                            <li><strong>Resource Minimization:</strong> Every byte of memory, every mW of power, every CPU cycle counts to keep costs down.</li>
+                            <li><strong>Performance:</strong>
+                                <ul>
+                                    <li><strong>Throughput:</strong> How much data can it process? (e.g., transactions per second).</li>
+                                    <li><strong>Responsiveness:</strong> How quickly does it react? (worst-case execution time).</li>
+                                    <li><strong>Predictability:</strong> Can we guarantee its timing behavior?</li>
+                                </ul>
+                            </li>
+                            <li><strong>Reliability:</strong> How consistently will it perform correctly?</li>
+                            <li><strong>Robustness:</strong> Can it handle unexpected conditions or bad inputs gracefully?</li>
+                            <li><strong>Safety:</strong> Preventing harm – often involves self-tests (POST, BIT).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- End Accordion -->
+
+            <div class="quiz-card">
+                <h4>🧠 Quick Check: Design Flow</h4>
+                <p>In which design phase do you define *what* the system will do in a precise, contractual manner?</p>
+                <div class="options">
+                    <button onclick="checkAnswer(this, 'design-flow', 'A')">A) Requirements</button>
+                    <button onclick="checkAnswer(this, 'design-flow', 'B')">B) Architecture</button>
+                    <button onclick="checkAnswer(this, 'design-flow', 'C')">C) Specification</button>
+                </div>
+                <p id="feedback-design-flow" class="feedback"></p>
+            </div>
+        </section>
+
+        <section id="software-techniques" class="topic-section">
+            <h2 class="section-title">3. The Code Behind the Magic: Software Techniques</h2>
+            <p class="section-intro">Software is the soul of an embedded system. Let's explore how it's crafted!</p>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Embedded Software: More Than Just Code <span class="arrow">▼</span></button>
+                    <div class="accordion-content">
+                        <p>It's the brain that tells the hardware what to do, often with strict timing and resource limits.</p>
+                        <ul>
+                            <li>A combination of computer hardware and software, performing a dedicated function.</li>
+                            <li>Often called <strong>firmware</strong>, typically stored on-chip and not user-alterable.</li>
+                            <li><strong>Real-Time Systems:</strong> Crucial for systems with timing deadlines (e.g., industrial control).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">The Developer's Toolkit: Essential Skills & Tools <span class="arrow">▼</span></button>
+                    <div class="accordion-content">
+                        <p>Embedded developers are a special breed, needing a blend of hardware and software expertise.</p>
+                        <h4>Key Skills:</h4>
+                        <ul>
+                            <li>Deep <strong>Hardware Knowledge</strong> (ICs, boards, buses).</li>
+                            <li>Writing <strong>Efficient Code</strong> for resource-constrained processors.</li>
+                            <li>Mastering <strong>Peripheral Interfaces</strong> for device control.</li>
+                            <li>Crafting <strong>Robust Code</strong> for long-term, reliable operation.</li>
+                            <li><strong>Minimal Resource</strong> management (memory, processing power).</li>
+                            <li>Aiming for <strong>Reusable Software</strong> (portability).</li>
+                        </ul>
+                        <h4>Essential Tools:</h4>
+                        <ul>
+                            <li><strong>Editor:</strong> To write your code (e.g., Geany).</li>
+                            <li><strong>Compiler:</strong> Translates high-level code (C/C++) to machine code (e.g., Keil C51).</li>
+                            <li><strong>Assembler:</strong> Converts assembly code to machine code (e.g., GNU Assembler).</li>
+                            <li><strong>Debugger:</strong> Your best friend for finding and fixing bugs (e.g., IDA Pro).</li>
+                            <li><strong>Linker:</strong> Combines code modules into a single executable.</li>
+                            <li><strong>Emulator:</strong> Simulates the target system to test software without physical hardware.</li>
+                            <li><strong>Integrated Development Environment (IDE):</strong> A powerful all-in-one package (e.g., PyCharm, Qt Creator, Visual Studio, Eclipse, MATLAB, Arduino IDE, ARM Keil).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- End Accordion -->
+
+            <div class="quiz-card">
+                <h4>🧠 Quick Check: Software Techniques</h4>
+                <p>What is the primary reason embedded software developers must focus on writing "efficient code"?</p>
+                <div class="options">
+                    <button onclick="checkAnswer(this, 'software-techniques', 'A')">A) To make the code easier to read</button>
+                    <button onclick="checkAnswer(this, 'software-techniques', 'B')">B) To meet performance requirements with limited processor power</button>
+                    <button onclick="checkAnswer(this, 'software-techniques', 'C')">C) To ensure code reusability</button>
+                </div>
+                <p id="feedback-software-techniques" class="feedback"></p>
+            </div>
+        </section>
+
+        <section id="io-devices" class="topic-section">
+            <h2 class="section-title">4. Talking to the World: I/O Devices</h2>
+            <p class="section-intro">How do embedded systems interact with their environment? Through a variety of clever input and output devices!</p>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Bringing Data Out: Output Devices <span class="arrow">▼</span></button>
+                    <div class="accordion-content">
+                        <p>These devices allow the embedded system to communicate information or perform actions in the physical world.</p>
+                        <ul>
+                            <li><strong>Light Emitting Diode (LED):</strong> The simplest visual indicator (e.g., "power on" light).</li>
+                            <li><strong>7-Segment LED Display:</strong> For showing numbers and basic characters (think old digital clocks).</li>
+                            <li><strong>Stepper Motor:</strong> Provides precise, discrete movements (e.g., in printers, robotics). Can be Unipolar or Bipolar.</li>
+                            <li><strong>Relay:</strong> An electromagnetic switch that controls higher power circuits with a low-power signal.</li>
+                            <li><strong>Piezo Buzzer:</strong> Generates audio alerts or tones (e.g., beeps in a microwave).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Getting Data In: Input Devices <span class="arrow">▼</span></button>
+                    <div class="accordion-content">
+                        <p>These devices allow the external world (or a user) to provide information to the embedded system.</p>
+                        <ul>
+                            <li><strong>Push Button Switch:</strong> A simple momentary switch (e.g., a doorbell button). Can be "Push to Make" (normally open) or "Push to Break" (normally closed).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">The Isolator: Optocoupler <span class="arrow">▼</span></button>
+                    <div class="accordion-content">
+                        <p>A clever device that uses light to electrically isolate two parts of a circuit, preventing interference.</p>
+                        <ul>
+                            <li>Combines an LED and a photo-transistor in one package.</li>
+                            <li>Used for circuit isolation, suppressing interference, and high voltage separation.</li>
+                            <li>Can be used in both input and output circuits.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- End Accordion -->
+
+            <div class="quiz-card">
+                <h4>🧠 Quick Check: I/O Devices</h4>
+                <p>Which device is used to provide precise, discrete rotational movement in response to DC electrical signals?</p>
+                <div class="options">
+                    <button onclick="checkAnswer(this, 'io-devices', 'A')">A) Relay</button>
+                    <button onclick="checkAnswer(this, 'io-devices', 'B')">B) Stepper Motor</button>
+                    <button onclick="checkAnswer(this, 'io-devices', 'C')">C) Piezo Buzzer</button>
+                </div>
+                <p id="feedback-io-devices" class="feedback"></p>
+            </div>
+        </section>
+
+        <section id="communication" class="topic-section">
+            <h2 class="section-title">5. The Global Network: Communication Interfaces</h2>
+            <p class="section-intro">Embedded systems don't live in isolation! They need to talk to each other and the outside world.</p>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Onboard Conversations: Device/Board Level <span class="arrow">▼</span></button>
+                    <div class="accordion-content">
+                        <p>These interfaces connect components *within* an embedded product.</p>
+                        <ul>
+                            <li><strong>I2C (Inter-Integrated Circuit) Bus:</strong>
+                                <ul>
+                                    <li>Synchronous, bi-directional, half-duplex, 2-wire (SCL, SDA).</li>
+                                    <li>Multi-master support, developed by Philips.</li>
+                                    <li>Great for connecting microcontrollers to small peripherals.</li>
+                                </ul>
+                            </li>
+                            <li><strong>SPI (Serial Peripheral Interface) Bus:</strong>
+                                <ul>
+                                    <li>Synchronous, bi-directional, full-duplex, 4-wire (MOSI, MISO, SCLK, SS).</li>
+                                    <li>Single master, multi-slave. Faster than I2C, but uses more pins.</li>
+                                    <li>Ideal for connecting to sensors, SD cards, displays.</li>
+                                </ul>
+                            </li>
+                            <li><strong>1-Wire Interface:</strong>
+                                <ul>
+                                    <li>Low-speed data, signaling, and power over a *single* conductor.</li>
+                                    <li>Similar to I2C but simpler, for very small, inexpensive devices (e.g., digital thermometers).</li>
+                                </ul>
+                            </li>
+                            <li><strong>Parallel Communication:</strong>
+                                <ul>
+                                    <li>Conveys multiple bits simultaneously (e.g., 8-bit parallel sends 8 bits at once).</li>
+                                    <li>Faster for short distances, but uses many wires.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">External Connections: Product Level <span class="arrow">▼</span></button>
+                    <div class="accordion-content">
+                        <p>These interfaces allow the embedded system to communicate with other devices or modules *outside* itself.</p>
+                        <h4>Wired Interfaces:</h4>
+                        <ul>
+                            <li><strong>RS-232C:</strong>
+                                <ul>
+                                    <li>A classic, full-duplex, asynchronous serial interface.</li>
+                                    <li>Point-to-point communication, often used for debugging or connecting to older devices.</li>
+                                    <li>Uses specific voltage levels, requires level translators (e.g., MAX232).</li>
+                                </ul>
+                            </li>
+                            <li><strong>USB (Universal Serial Bus):</strong>
+                                <ul>
+                                    <li>The ubiquitous standard for connecting peripherals (keyboards, printers, storage).</li>
+                                    <li>Supports various speeds (Low, Full, High-Speed).</li>
+                                    <li>Tiered Star Topology, host-controlled.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h4>Wireless Interfaces:</h4>
+                        <ul>
+                            <li><strong>Infrared (IR):</strong>
+                                <ul>
+                                    <li>Short-range, line-of-sight communication using light (e.g., TV remote).</li>
+                                    <li>Often modulated to avoid interference.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Bluetooth (BT):</strong>
+                                <ul>
+                                    <li>Short-range wireless for personal area networks (PANs) (e.g., headphones, smartwatches).</li>
+                                    <li>Uses frequency-hopping spread spectrum, master-slave piconets.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Wi-Fi (Wireless LAN):</strong>
+                                <ul>
+                                    <li>High-speed wireless networking (IEEE 802.11) for internet access.</li>
+                                    <li>Requires a router/access point.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Zigbee:</strong>
+                                <ul>
+                                    <li>Low-power, low-data-rate wireless for home automation, IoT.</li>
+                                    <li>Can form mesh networks for longer range.</li>
+                                    <li>Simpler and cheaper than Bluetooth/Wi-Fi.</li>
+                                </ul>
+                            </li>
+                            <li><strong>GPRS (General Packet Radio Service):</strong>
+                                <ul>
+                                    <li>Packet-oriented mobile data service (2G/3G cellular).</li>
+                                    <li>Enables "always on" internet access, SMS, MMS for embedded devices.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- End Accordion -->
+
+            <div class="quiz-card">
+                <h4>🧠 Quick Check: Communication</h4>
+                <p>Which wireless communication protocol is known for its low power consumption and ability to form mesh networks, making it ideal for IoT applications?</p>
+                <div class="options">
+                    <button onclick="checkAnswer(this, 'communication', 'A')">A) Bluetooth</button>
+                    <button onclick="checkAnswer(this, 'communication', 'B')">B) Wi-Fi</button>
+                    <button onclick="checkAnswer(this, 'communication', 'C')">C) Zigbee</button>
+                </div>
+                <p id="feedback-communication" class="feedback"></p>
+            </div>
+        </section>
+
+        <section id="history" class="topic-section">
+            <h2 class="section-title">6. The Journey Begins: History & Overview</h2>
+            <p class="section-intro">From the moon landing to your smartwatch, embedded systems have a rich and fascinating past!</p>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">What Exactly IS an Embedded System? <span class="arrow">▼</span></button>
+                    <div class="accordion-content">
+                        <p>It's more than just a computer; it's a dedicated problem-solver.</p>
+                        <ul>
+                            <li>An electronic/electromechanical system designed for a <strong>specific function</strong>.</li>
+                            <li>A seamless blend of <strong>hardware and firmware (software)</strong>.</li>
+                            <li><em>Examples:</em> Your car's engine control unit, a smart thermostat, a digital camera.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Embedded vs. General-Purpose: A Tale of Two Systems <span class="arrow">▼</span></button>
+                    <div class="accordion-content">
+                        <p>Why is your phone different from your PC, even though both have processors?</p>
+                        <ul>
+                            <li><strong>General-Purpose Computing Systems (e.g., PC):</strong>
+                                <ul>
+                                    <li>Generic hardware, versatile OS (Windows, macOS).</li>
+                                    <li>User can install/remove applications.</li>
+                                    <li>"Faster is Better" often drives selection.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Embedded Systems:</strong>
+                                <ul>
+                                    <li>Special-purpose hardware, often no user-alterable OS.</li>
+                                    <li>Firmware is pre-programmed, not user-changeable.</li>
+                                    <li>Key drivers: application-specific needs (power, cost, size, real-time response).</li>
+                                    <li>Highly optimized for power saving and deterministic behavior.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Milestones in Embedded History <span class="arrow">▼</span></button>
+                    <div class="accordion-content">
+                        <p>From guiding astronauts to mass production, embedded systems have come a long way.</p>
+                        <ul>
+                            <li><strong>First Recognized Modern Embedded System:</strong> The <strong>Apollo Guidance Computer (AGC)</strong>, developed by Charles Stark Draper at MIT. Crucial for the moon missions!</li>
+                            <li><strong>First Mass Produced Embedded System:</strong> The <strong>Autonetics D-17 Guidance computer</strong> for the Minuteman-I missile.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Classifying the Embedded World <span class="arrow">▼</span></button>
+                    <div class="accordion-content">
+                        <p>Embedded systems are diverse! We can categorize them in several ways:</p>
+                        <ul>
+                            <li><strong>By Generation:</strong>
+                                <ul>
+                                    <li><strong>First:</strong> 8-bit microprocessors (e.g., 8085, Z80).</li>
+                                    <li><strong>Second:</strong> 16-bit microprocessors, 8/16-bit microcontrollers.</li>
+                                    <li><strong>Third:</strong> High-performance 16/32-bit, DSPs, ASICs (e.g., robotics).</li>
+                                    <li><strong>Fourth:</strong> SoCs, reconfigurable, multicore (e.g., smartphones).</li>
+                                </ul>
+                            </li>
+                            <li><strong>By Complexity & Performance:</strong> Small Scale, Medium Scale, Large Scale/Complex.</li>
+                            <li><strong>By Deterministic Behavior (Real-Time):</strong>
+                                <ul>
+                                    <li><strong>Soft Real-Time:</strong> Missing deadlines is okay sometimes.</li>
+                                    <li><strong>Hard Real-Time:</strong> Missing deadlines is catastrophic (e.g., flight control).</li>
+                                </ul>
+                            </li>
+                            <li><strong>By Triggering:</strong>
+                                <ul>
+                                    <li><strong>Event Triggered:</strong> Reacts to events.</li>
+                                    <li><strong>Time Triggered:</strong> Follows a strict schedule.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Where Do We Find Them? Application Areas <span class="arrow">▼</span></button>
+                    <div class="accordion-content">
+                        <p>They're everywhere! From your car to medical devices, embedded systems power our modern world.</p>
+                        <ul>
+                            <li><strong>Automotive:</strong> Engine control, ABS, infotainment.</li>
+                            <li><strong>Avionics:</strong> Flight control, navigation.</li>
+                            <li><strong>Telecommunication:</strong> Mobile phones, routers.</li>
+                            <li><strong>Health Sector:</strong> Medical imaging, patient monitoring.</li>
+                            <li><strong>Consumer Electronics:</strong> TVs, smart home devices.</li>
+                            <li><strong>Robotics:</strong> Industrial robots, drones.</li>
+                            <li>...and many more!</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Their Ultimate Purpose <span class="arrow">▼</span></button>
+                    <div class="accordion-content">
+                        <p>Every embedded system serves a core function or a combination of them:</p>
+                        <ul>
+                            <li><strong>Data Collection/Storage/Representation:</strong> Gathering info from sensors.</li>
+                            <li><strong>Data Communication:</strong> Sending/receiving data (wired/wireless).</li>
+                            <li><strong>Data (Signal) Processing:</strong> Analyzing and transforming data (e.g., audio/video codecs).</li>
+                            <li><strong>Monitoring:</strong> Observing variables (e.g., ECG machine).</li>
+                            <li><strong>Control:</strong> Actively managing variables (e.g., air conditioner).</li>
+                            <li><strong>Application Specific User Interface:</strong> Tailored interaction for specific users.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- End Accordion -->
+
+            <div class="quiz-card">
+                <h4>🧠 Quick Check: History & Overview</h4>
+                <p>What was the primary purpose of the Apollo Guidance Computer (AGC)?</p>
+                <div class="options">
+                    <button onclick="checkAnswer(this, 'history', 'A')">A) To control factory automation</button>
+                    <button onclick="checkAnswer(this, 'history', 'B')">B) To guide the Apollo spacecraft</button>
+                    <button onclick="checkAnswer(this, 'history', 'C')">C) To manage telecommunication networks</button>
+                </div>
+                <p id="feedback-history" class="feedback"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Embedded Systems. Happy Learning!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
