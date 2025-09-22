@@ -177,18 +177,18 @@
             </div>
 
             <!-- Multiple Quizzes for Characteristics -->
-            <div class="quiz-card" id="quiz-characteristics-1">
+            <div class="quiz-card" data-section="characteristics">
                 <h4>🧠 Quick Check 1: Characteristics</h4>
                 <p>Which characteristic describes an embedded system's ability to react to real-world changes in a predictable timeframe?</p>
                 <div class="options">
-                    <button onclick="checkAnswer('characteristics-1', 'A')">A) Application Specific</button>
+                    <button onclick="checkAnswer('characteristics-1', 'B')">A) Application Specific</button>
                     <button onclick="checkAnswer('characteristics-1', 'B')">B) Reactive and Real-Time</button>
                     <button onclick="checkAnswer('characteristics-1', 'C')">C) Tightly-Constrained</button>
                 </div>
                 <p id="feedback-characteristics-1" class="feedback"></p>
             </div>
 
-            <div class="quiz-card" id="quiz-characteristics-2">
+            <div class="quiz-card" data-section="characteristics">
                 <h4>🧠 Quick Check 2: Characteristics</h4>
                 <p>What does MTBF measure in terms of reliability?</p>
                 <div class="options">
@@ -199,7 +199,7 @@
                 <p id="feedback-characteristics-2" class="feedback"></p>
             </div>
 
-            <div class="quiz-card" id="quiz-characteristics-3">
+            <div class="quiz-card" data-section="characteristics">
                 <h4>🧠 Quick Check 3: Characteristics</h4>
                 <p>Why is power concern a key characteristic for embedded systems?</p>
                 <div class="options">
@@ -223,14 +223,4 @@
                         <p>Gather informal customer descriptions to define needs.</p>
                         <ul>
                             <li>Functional: What the system does (e.g., inputs, outputs, functions).</li>
-                            <li>Non-Functional: Performance, cost, size/weight, power.</li>
-                            <li><em>Example:</em> GPS Moving Map: Name/Purpose (navigation), Inputs (buttons, GPS signals), Outputs (LCD map), Functions (position calculation), Performance (0.25s updates), Cost (<$100), Power (1W), Size (handheld).</li>
-                            <li>Iterative: Refine based on feasibility.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <button class="accordion-header">Specification Phase <span class="arrow">▼</span></button>
-                    <div class="accordion-content">
-                        <p>Refine requirements into
+                            <li>Non-Functional
