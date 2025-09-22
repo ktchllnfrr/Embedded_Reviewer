@@ -1,0 +1,348 @@
+/* General Body & Typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ece9e6, #ffffff); /* Subtle gradient */
+    color: #333;
+    scroll-behavior: smooth; /* Smooth scrolling for nav links */
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50; /* Darker blue-grey for headings */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1500x500/3498db/ffffff?text=Embedded+Systems+Background') no-repeat center center/cover; /* Placeholder image, replace with a relevant one */
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero .tagline {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #2ecc71; /* Green button */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+/* Sticky Navigation */
+.sticky-nav {
+    background: #34495e; /* Dark blue-grey */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #2ecc71; /* Green on hover */
+    border-bottom: 2px solid #2ecc71;
+}
+
+/* Main Content Area */
+main {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Did You Know Section */
+.did-you-know {
+    background: #f0f8ff; /* Light blue background */
+    border-left: 5px solid #3498db; /* Blue accent */
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.did-you-know h3 {
+    color: #3498db;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Topic Sections */
+.topic-section {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #ccc; /* Dashed separator */
+}
+
+.topic-section:last-of-type {
+    border-bottom: none;
+}
+
+.section-title {
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #e74c3c; /* Red accent */
+    border-radius: 2px;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.sub-section-title {
+    font-size: 1.6em;
+    color: #34495e;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-left: 4px solid #2ecc71;
+    padding-left: 10px;
+}
+
+/* Accordion Styling */
+.accordion-item {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #e9e9e9;
+}
+
+.accordion-header.active {
+    background-color: #e0e0e0;
+}
+
+.accordion-content {
+    padding: 15px 20px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    display: none; /* Hidden by default */
+    animation: slideDown 0.3s ease-out;
+}
+
+.accordion-content p {
+    margin-top: 0;
+}
+
+.accordion-content ul {
+    list-style-type: disc;
+    margin-left: 25px;
+    padding: 0;
+}
+
+.accordion-content ul li {
+    margin-bottom: 8px;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* Quiz Card */
+.quiz-card {
+    background: #ecf0f1; /* Light grey */
+    border-left: 5px solid #f39c12; /* Orange accent */
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.quiz-card h4 {
+    color: #f39c12;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.quiz-card p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.quiz-card .options button {
+    background-color: #3498db; /* Blue option buttons */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.quiz-card .options button:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+}
+
+.quiz-card .feedback {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.quiz-card .feedback.correct {
+    color: #28a745; /* Green for correct */
+}
+
+.quiz-card .feedback.incorrect {
+    color: #dc3545; /* Red for incorrect */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #2c3e50; /* Dark blue-grey */
+    color: #fff;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .hero .tagline {
+        font-size: 1em;
+    }
+    .nav-list li {
+        margin: 0 8px;
+    }
+    .section-title {
+        font-size: 1.8em;
+    }
+    main {
+        margin: 10px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-list {
+        flex-direction: column;
+    }
+    .nav-list li {
+        margin: 5px 0;
+    }
+    .quiz-card .options button {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
